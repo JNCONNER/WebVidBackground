@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 /* i dont get that the overlay is a div with nothing inside it but when i target "overlay" inside css it changes the background image but nothing inside "overlay div */
+ 
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,39 +9,22 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.showcase {
-    position: absolute;
-    right: 0;
-    width: 100%;
-    min-height: 100vh;
-    padding: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #111;
-    color: #fff;
-    z-index: 2;
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
 }
-
-.showcase.active {
-    right: 300px;
-}
-
-.showcase header {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   padding: 40px 100px;
-   z-index: 1000;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-}
-
-.logo {
-    text-transform: uppercase;
-    cursor: pointer;
+header.logo {
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .toggle {
@@ -58,6 +43,25 @@
     background-repeat: no-repeat;
     background-size: 25px;
     background-position: center;
+    cursor: pointer;
+}
+
+.showcase {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.showcase.active {
+    right: 250px;
 }
 
 .showcase video {
@@ -81,15 +85,21 @@
 }
 
 .text {
+    display: flex;
     position: relative;
     z-index: 10;
+    flex-direction: row;
 }
 
 .text h2 {
-    font-size: 5em;
-    font-weight: 800;
+    margin-left: 180px;
+    display: flex;
+    flex-direction: flex-end;
+    font-size: 30px;
+    font-weight: 900;
     line-height: 1em;
     text-transform: uppercase;
+    color: #fff;
 }
 
 .text h3 {
@@ -97,9 +107,11 @@
     font-weight: 700;
     line-height: 1em;
     text-transform: uppercase;
+    color: #fff;
 }
 
 .text p {
+    color: fff;
     font-size: 1.1em;
     margin: 20px 0;
     font-weight: 400;
@@ -113,7 +125,7 @@
     padding: 10px 30px;
     text-decoration: none;
     color: #111;
-    margin-top: 10px;
+    margin-top: 200px;
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.2s;
@@ -161,22 +173,25 @@
 }
 
 .menu ul {
-  position: relative;
-}
-.menu ul li {
-  list-style: none;
-}
-.menu ul li a {
-  text-decoration: none;
-  font-size: 24px;
-  color: #111;
-}
-.menu ul li a:hover {
-  color: #03a9f4; 
-}
+    position: relative;
+  }
+  .menu ul li {
+    list-style: none;
+  }
 
-@media(max-width: 991px) {
-    .showcase, .showcase header {
+  .menu ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #111;
+  }
+
+  .menu ul li a:hover {
+    color: #03a9f4; 
+  }
+
+  @media(max-width: 991px) {
+    .showcase, 
+    .showcase header {
         padding: 40px;
     }
     .text h2 {
@@ -186,3 +201,22 @@
         font-size: 2em;
     }
 }
+  
+
+ .showcase header {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 40px 100px;
+   z-index: 1000;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.logo {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
